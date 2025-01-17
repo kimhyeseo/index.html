@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hyeseodotcom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; /*페이지 외부 여백 제거 : margin*/
+            padding: 0;/*페이지 내부 여백 제거 : padding*/
+            background-color: pink;
+        }
+        #header { /*상단바*/
+            background-color: palevioletred;
+            height: 100px; /*상단바 높이 지정*/
+            display: flex; /*내부 내용을 가로로 정렬하는 Flexbox*/
+            align-items: center; /*상단바 내용을 가운데 정렬*/
+            justify-content: space-between;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        #header h2 {
+            margin: 0;
+            font-size: 30px;
+            color: white;
+        }
+        #nav-links {
+            display: flex; /*디스플레이를 가로로 정렬*/
+            gap: 20px; /*링크 사이에 20px간격 추가*/
+        }
+        #nav-links a {
+            text-decoration: none;
+            color: white;
+            background-color: hotpink;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        #nav-links a:hover {
+            background-color: hotpink;
+        }
+        #container {
+            margin-top: 120px;
+            text-align: center;
+        }
+        #search-box {
+            width: 60%;
+            max-width: 400px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #search-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #search-button:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 상단바 -->
+    <div id="header">
+        <h2>HYESEO.DOTCOM</h2>
+        <div id="nav-links">
+            <a href="https://www.naver.com" target="_blank">네이버</a>
+            <a href="https://www.daum.net" target="_blank">다음</a>
+            <a href="https://www.google.com" target="_blank">구글</a>
+        </div>
+    </div>
+
+    <!-- 검색 영역 -->
+    <div id="container">
+        <h1 style="color: purple;">💁🏻 혜서닷컴에 오신 것을 환영합니다! 🤩</h1>
+        <form action="https://search.naver.com/search.naver" method="get" target="_blank">
+            <input type="text" id="search-box" name="query" placeholder="혜서에게 물어보세요">
+            <button type="submit" id="search-button">검색</button>
+        </form>
+    </div>
+</body>
+</html>
